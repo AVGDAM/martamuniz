@@ -33,6 +33,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `Psicóloga Online en ${ciudadData.nombre} - Terapia por Videollamada`,
       description: `Terapia online profesional para personas de ${ciudadData.nombre} y ${ciudadData.provincia}. Sesiones por videollamada desde 55€.`,
+      type: "website",
+      locale: "es_ES",
+      url: `https://martamg.com/terapia-online/${resolvedParams.ciudad}`,
+      siteName: "Marta Muñiz Psicóloga",
+      images: [
+        {
+          url: "https://martamg.com/og-terapia-online.jpg",
+          width: 1200,
+          height: 630,
+          alt: `Psicóloga Online en ${ciudadData.nombre}`,
+        }
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `Psicóloga Online en ${ciudadData.nombre}`,
+      description: `Terapia online para ${ciudadData.nombre}. Sesiones por videollamada desde 55€.`,
+      images: ["https://martamg.com/og-terapia-online.jpg"],
+    },
+    alternates: {
+      canonical: `https://martamg.com/terapia-online/${resolvedParams.ciudad}`,
     },
   };
 }

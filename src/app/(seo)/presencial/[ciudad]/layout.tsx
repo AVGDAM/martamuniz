@@ -30,6 +30,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `Psicóloga en ${ciudadData.nombre}, Cantabria`,
       description: `Terapia presencial en Santander para personas de ${ciudadData.nombre} y alrededores.`,
+      type: "website",
+      locale: "es_ES",
+      url: `https://martamg.com/presencial/${resolvedParams.ciudad}`,
+      siteName: "Marta Muñiz Psicóloga",
+      images: [
+        {
+          url: "https://martamg.com/og-presencial.jpg",
+          width: 1200,
+          height: 630,
+          alt: `Psicóloga en ${ciudadData.nombre}, Cantabria`,
+        }
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `Psicóloga en ${ciudadData.nombre}, Cantabria`,
+      description: `Terapia presencial en Santander para ${ciudadData.nombre}.`,
+      images: ["https://martamg.com/og-presencial.jpg"],
+    },
+    alternates: {
+      canonical: `https://martamg.com/presencial/${resolvedParams.ciudad}`,
     },
   };
 }

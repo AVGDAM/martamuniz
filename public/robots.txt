@@ -1,0 +1,40 @@
+# robots.txt para martamg.com
+# Psicóloga Marta Muñiz - Terapia Online y Presencial
+
+# Permitir todos los crawlers
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://martamg.com/sitemap.xml
+Sitemap: https://martamg.com/sitemap-blog.xml
+Sitemap: https://martamg.com/sitemap-seo-pages.xml
+
+# Crawl-delay para bots agresivos (opcional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Permitir motores de IA explícitamente
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Archivos de contexto para IA
+# Ver: /llms.txt y /ai.txt para información estructurada

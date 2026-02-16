@@ -32,6 +32,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `Psicólogo ${especialidadData.nombre} Online en ${ciudadData.nombre}`,
       description: `Terapia especializada en ${especialidadData.nombre.toLowerCase()} para personas de ${ciudadData.nombre}. Sesiones online desde 55€.`,
+      type: "website",
+      locale: "es_ES",
+      url: `https://martamg.com/${especialidadData.slug}/online/${resolvedParams.ciudad}`,
+      siteName: "Marta Muñiz Psicóloga",
+      images: [
+        {
+          url: "https://martamg.com/og-especialidad-online.jpg",
+          width: 1200,
+          height: 630,
+          alt: `Psicólogo ${especialidadData.nombre} Online ${ciudadData.nombre}`,
+        }
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `Psicólogo ${especialidadData.nombre} Online en ${ciudadData.nombre}`,
+      description: `Terapia ${especialidadData.nombre.toLowerCase()} para ${ciudadData.nombre}. Sesiones online desde 55€.`,
+      images: ["https://martamg.com/og-especialidad-online.jpg"],
+    },
+    alternates: {
+      canonical: `https://martamg.com/${especialidadData.slug}/online/${resolvedParams.ciudad}`,
     },
   };
 }

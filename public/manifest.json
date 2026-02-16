@@ -1,0 +1,35 @@
+{
+  "name": "Marta Muñiz - Psicóloga en Santander",
+  "short_name": "Marta Muñiz",
+  "description": "Psicóloga sanitaria especializada en duelo, terapia de pareja, ansiedad y depresión. Sesiones presenciales en Santander y online en toda España.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFCF9",
+  "theme_color": "#7A9B76",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "medical", "lifestyle"],
+  "lang": "es",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}

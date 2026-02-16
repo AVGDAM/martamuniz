@@ -27,6 +27,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     siteName: "Marta Muñiz Psicóloga",
+    url: "https://martamg.com",
+    images: [
+      {
+        url: "https://martamg.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Marta Muñiz - Psicóloga en Santander | Terapia Online",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Marta Muñiz - Psicóloga Especialista en Duelo y Pareja",
+    description: "Terapia presencial en Santander y online. Especializada en duelo, pareja, ansiedad y depresión.",
+    images: ["https://martamg.com/og-image.jpg"],
   },
   alternates: {
     canonical: "https://martamg.com",
