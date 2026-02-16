@@ -1,0 +1,74 @@
+{
+  "business": {
+    "name": "Marta Muñiz - Psicóloga",
+    "type": "ProfessionalService",
+    "description": "Psicóloga sanitaria especializada en duelo, pareja, ansiedad y depresión",
+    "phone": "+34680614901",
+    "email": "hola@martamg.com",
+    "website": "https://martamg.com"
+  },
+  "headquarters": {
+    "city": "Santander",
+    "region": "Cantabria",
+    "country": "España",
+    "countryCode": "ES",
+    "coordinates": {
+      "latitude": 43.4623,
+      "longitude": -3.8099
+    },
+    "timezone": "Europe/Madrid"
+  },
+  "serviceAreas": {
+    "online": {
+      "description": "Terapia online disponible para toda España",
+      "coverage": "national",
+      "cities": 50,
+      "mainCities": [
+        "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza",
+        "Málaga", "Murcia", "Palma de Mallorca", "Las Palmas", "Bilbao"
+      ]
+    },
+    "presencial": {
+      "description": "Terapia presencial en Santander",
+      "coverage": "regional",
+      "region": "Cantabria",
+      "cities": [
+        "Santander", "Torrelavega", "Castro Urdiales", "Camargo",
+        "El Astillero", "Piélagos", "Santa Cruz de Bezana",
+        "Santoña", "Laredo", "Reinosa"
+      ]
+    }
+  },
+  "specialties": [
+    {
+      "name": "Duelo",
+      "slug": "duelo",
+      "cities": 20,
+      "type": "online"
+    },
+    {
+      "name": "Terapia de Pareja",
+      "slug": "pareja",
+      "cities": 20,
+      "type": "online"
+    },
+    {
+      "name": "Ansiedad",
+      "slug": "ansiedad",
+      "cities": 20,
+      "type": "online"
+    },
+    {
+      "name": "Depresión",
+      "slug": "depresion",
+      "cities": 20,
+      "type": "online"
+    }
+  ],
+  "totalPages": 140,
+  "seoStructure": {
+    "terapiaOnline": 50,
+    "especialidadesOnline": 80,
+    "presencialCantabria": 10
+  }
+}

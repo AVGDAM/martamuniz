@@ -1,0 +1,23 @@
+/* EQUIPO */
+Psicóloga: Marta Muñiz
+Contacto: hola@martamg.com
+Ubicación: Santander, Cantabria, España
+
+/* DESARROLLO */
+Desarrollador: AVGDAM
+Web: https://avgg.es
+GitHub: https://github.com/AVGDAM
+Stack: Next.js 15, TypeScript, Tailwind CSS
+Desde: Santander, España
+
+/* SITIO */
+Última actualización: 2026/02/16
+Idiomas: Español
+Doctype: HTML5
+IDE: Visual Studio Code
+Herramientas: Next.js, Vercel, GitHub, Framer Motion
+
+/* AGRADECIMIENTOS */
+Next.js Team
+Vercel
+Open Source Community

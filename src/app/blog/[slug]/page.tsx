@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Script from 'next/script';
 import { FaArrowLeft, FaCalendar, FaClock, FaWhatsapp } from 'react-icons/fa';
 import { use } from 'react';
 
@@ -472,7 +473,8 @@ const articles = {
 
 export default function BlogArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = use(params);
-  const article = articles[resolvedParams.slug as keyof typeof articles];
+  const slug = resolvedParams.slug;
+  const article = articles[slug as keyof typeof articles];
 
   if (!article) {
     return (
@@ -487,8 +489,43 @@ export default function BlogArticlePage({ params }: { params: Promise<{ slug: st
     );
   }
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    image: `https://martamg.com${article.image !== '🕊️' && article.image !== '💑' && article.image !== '😰' && article.image !== '💻' && article.image !== '🎲' && article.image !== '😔' && article.image !== '💬' && article.image !== '✨' && article.image !== '🌈' ? article.image : '/og-image.jpg'}`,
+    datePublished: article.date,
+    dateModified: article.date,
+    author: {
+      "@type": "Person",
+      name: "Marta Muñiz",
+      url: "https://martamg.com/sobre-mi",
+      jobTitle: "Psicóloga Sanitaria"
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Marta Muñiz - Psicóloga",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://martamg.com/favicon.svg"
+      }
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://martamg.com/blog/${slug}`
+    },
+    articleSection: article.category,
+    keywords: [article.category, "psicología", "terapia", "salud mental"],
+    description: article.content.find(c => c.type === 'intro')?.text || article.title
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-cream-50 to-white">
+      <Script
+        id="article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       {/* Back Button */}
       <div className="max-w-4xl mx-auto px-4 pt-24">
         <Link

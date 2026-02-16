@@ -1,0 +1,7 @@
+Contact: mailto:hola@martamg.com
+Contact: tel:+34-680-614-901
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: es, en
+Canonical: https://martamg.com/.well-known/security.txt
+Policy: https://martamg.com/politica-privacidad
+Hiring: https://martamg.com/contacto

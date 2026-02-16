@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Script from 'next/script';
 import { FaCheck, FaMapMarkerAlt, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 
 interface SEOPageProps {
@@ -165,8 +166,107 @@ export default function SEOPageTemplate({ ciudad, provincia, comunidad, tipo, es
     },
   ];
 
+  // Schema.org JSON-LD
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: `Marta Muñiz - Psicóloga ${tipo === 'presencial' ? 'en' : 'Online para'} ${ciudad}`,
+    image: "https://martamg.com/og-image.jpg",
+    "@id": `https://martamg.com/${tipo === 'especialidad-online' ? `${especialidadSlug}/online/${ciudad.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '')}` : tipo === 'presencial' ? `presencial/${ciudad.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '')}` : `terapia-online/${ciudad.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '')}`}`,
+    url: `https://martamg.com/${tipo === 'especialidad-online' ? `${especialidadSlug}/online/${ciudad.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '')}` : tipo === 'presencial' ? `presencial/${ciudad.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '')}` : `terapia-online/${ciudad.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '')}`}`,
+    telephone: "+34680614901",
+    email: "hola@martamg.com",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: tipo === 'presencial' ? "Santander" : ciudad,
+      addressRegion: comunidad || provincia,
+      addressCountry: "ES"
+    },
+    geo: tipo === 'presencial' ? {
+      "@type": "GeoCoordinates",
+      latitude: 43.4623,
+      longitude: -3.8099
+    } : undefined,
+    priceRange: "€€",
+    areaServed: {
+      "@type": "City",
+      name: ciudad,
+      containedIn: {
+        "@type": "AdministrativeArea",
+        name: comunidad || provincia
+      }
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: tipo === 'especialidad-online' ? `Terapia de ${especialidad}` : tipo === 'presencial' ? 'Terapia Presencial' : 'Terapia Online',
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "MedicalTherapy",
+            name: tipo === 'especialidad-online' ? `Terapia ${especialidad} Online` : tipo === 'presencial' ? 'Sesión Individual Presencial' : 'Sesión Individual Online'
+          },
+          price: tipo === 'presencial' ? "60" : "55",
+          priceCurrency: "EUR"
+        }
+      ]
+    }
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(faq => ({
+      "@type": "Question",
+      name: faq.pregunta,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.respuesta
+      }
+    }))
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: "https://martamg.com"
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: tipo === 'especialidad-online' ? especialidad : tipo === 'presencial' ? 'Terapia Presencial' : 'Terapia Online',
+        item: `https://martamg.com/${tipo === 'especialidad-online' ? `${especialidadSlug}/online/${ciudad.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '')}` : tipo === 'presencial' ? `presencial/${ciudad.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '')}` : `terapia-online/${ciudad.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '')}`}`
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: ciudad
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-cream-50 to-white">
+      <Script
+        id="local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 bg-gradient-to-r from-sage-50 to-cream-50">
         <div className="max-w-4xl mx-auto">
