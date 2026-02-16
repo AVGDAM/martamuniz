@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaCheck, FaMapMarkerAlt, FaVideo, FaWhatsapp, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaCheck, FaMapMarkerAlt, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 
 interface SEOPageProps {
   ciudad: string;

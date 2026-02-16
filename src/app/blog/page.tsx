@@ -99,8 +99,6 @@ const blogPosts = [
   },
 ];
 
-const categories = ['Todos', 'Duelo', 'Pareja', 'Salud Mental', 'Terapia Online', 'Adicciones', 'Desarrollo Personal', 'Diversidad'];
-
 const POSTS_PER_PAGE = 6;
 
 export default function BlogPage() {

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import Link from 'next/link';
 import { FaCheck, FaHeart, FaComments, FaHandshake } from 'react-icons/fa';
 
 export default function TerapiaPareja() {
@@ -90,12 +91,12 @@ export default function TerapiaPareja() {
               >
                 Reservar Primera Sesión
               </a>
-              <a
+              <Link
                 href="/contacto"
                 className="inline-flex items-center justify-center rounded-full border-2 border-sage-700 px-8 py-4 text-base font-semibold text-sage-700 hover:bg-sage-50 transition-all hover:scale-105"
               >
                 Más Información
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>

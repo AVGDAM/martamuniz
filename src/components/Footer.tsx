@@ -82,7 +82,7 @@ export default function Footer() {
               <Link href="/terapia-online/valladolid" className="hover:text-white transition-colors">Valladolid</Link>
               <Link href="/terapia-online/vigo" className="hover:text-white transition-colors">Vigo</Link>
               <Link href="/terapia-online/gijon" className="hover:text-white transition-colors">Gijón</Link>
-              <Link href="/terapia-online/hospitalet-de-llobregat" className="hover:text-white transition-colors">L'Hospitalet</Link>
+              <Link href="/terapia-online/hospitalet-de-llobregat" className="hover:text-white transition-colors">L&apos;Hospitalet</Link>
               <Link href="/terapia-online/la-coruna" className="hover:text-white transition-colors">A Coruña</Link>
               <Link href="/terapia-online/vitoria-gasteiz" className="hover:text-white transition-colors">Vitoria</Link>
               <Link href="/terapia-online/granada" className="hover:text-white transition-colors">Granada</Link>
@@ -143,7 +143,7 @@ export default function Footer() {
                 <Link href="/duelo/online/valladolid" className="hover:text-white transition-colors">Valladolid</Link>
                 <Link href="/duelo/online/vigo" className="hover:text-white transition-colors">Vigo</Link>
                 <Link href="/duelo/online/gijon" className="hover:text-white transition-colors">Gijón</Link>
-                <Link href="/duelo/online/hospitalet-de-llobregat" className="hover:text-white transition-colors">L'Hospitalet</Link>
+                <Link href="/duelo/online/hospitalet-de-llobregat" className="hover:text-white transition-colors">L&apos;Hospitalet</Link>
                 <Link href="/duelo/online/la-coruna" className="hover:text-white transition-colors">A Coruña</Link>
                 <Link href="/duelo/online/vitoria-gasteiz" className="hover:text-white transition-colors">Vitoria</Link>
                 <Link href="/duelo/online/granada" className="hover:text-white transition-colors">Granada</Link>
@@ -170,7 +170,7 @@ export default function Footer() {
                 <Link href="/pareja/online/valladolid" className="hover:text-white transition-colors">Valladolid</Link>
                 <Link href="/pareja/online/vigo" className="hover:text-white transition-colors">Vigo</Link>
                 <Link href="/pareja/online/gijon" className="hover:text-white transition-colors">Gijón</Link>
-                <Link href="/pareja/online/hospitalet-de-llobregat" className="hover:text-white transition-colors">L'Hospitalet</Link>
+                <Link href="/pareja/online/hospitalet-de-llobregat" className="hover:text-white transition-colors">L&apos;Hospitalet</Link>
                 <Link href="/pareja/online/la-coruna" className="hover:text-white transition-colors">A Coruña</Link>
                 <Link href="/pareja/online/vitoria-gasteiz" className="hover:text-white transition-colors">Vitoria</Link>
                 <Link href="/pareja/online/granada" className="hover:text-white transition-colors">Granada</Link>
@@ -197,7 +197,7 @@ export default function Footer() {
                 <Link href="/ansiedad/online/valladolid" className="hover:text-white transition-colors">Valladolid</Link>
                 <Link href="/ansiedad/online/vigo" className="hover:text-white transition-colors">Vigo</Link>
                 <Link href="/ansiedad/online/gijon" className="hover:text-white transition-colors">Gijón</Link>
-                <Link href="/ansiedad/online/hospitalet-de-llobregat" className="hover:text-white transition-colors">L'Hospitalet</Link>
+                <Link href="/ansiedad/online/hospitalet-de-llobregat" className="hover:text-white transition-colors">L&apos;Hospitalet</Link>
                 <Link href="/ansiedad/online/la-coruna" className="hover:text-white transition-colors">A Coruña</Link>
                 <Link href="/ansiedad/online/vitoria-gasteiz" className="hover:text-white transition-colors">Vitoria</Link>
                 <Link href="/ansiedad/online/granada" className="hover:text-white transition-colors">Granada</Link>
@@ -224,7 +224,7 @@ export default function Footer() {
                 <Link href="/depresion/online/valladolid" className="hover:text-white transition-colors">Valladolid</Link>
                 <Link href="/depresion/online/vigo" className="hover:text-white transition-colors">Vigo</Link>
                 <Link href="/depresion/online/gijon" className="hover:text-white transition-colors">Gijón</Link>
-                <Link href="/depresion/online/hospitalet-de-llobregat" className="hover:text-white transition-colors">L'Hospitalet</Link>
+                <Link href="/depresion/online/hospitalet-de-llobregat" className="hover:text-white transition-colors">L&apos;Hospitalet</Link>
                 <Link href="/depresion/online/la-coruna" className="hover:text-white transition-colors">A Coruña</Link>
                 <Link href="/depresion/online/vitoria-gasteiz" className="hover:text-white transition-colors">Vitoria</Link>
                 <Link href="/depresion/online/granada" className="hover:text-white transition-colors">Granada</Link>

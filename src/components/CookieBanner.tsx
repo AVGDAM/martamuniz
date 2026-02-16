@@ -83,7 +83,7 @@ export default function CookieBanner() {
                     </h3>
                     <p className="text-sm text-sage-600 leading-relaxed">
                       Utilizamos cookies para mejorar tu experiencia de navegación, analizar el tráfico del sitio y personalizar el contenido. 
-                      Al hacer clic en "Aceptar todas", aceptas el uso de todas las cookies.{' '}
+                      Al hacer clic en &quot;Aceptar todas&quot;, aceptas el uso de todas las cookies.{' '}
                       <Link 
                         href="/politica-cookies" 
                         className="text-sage-700 hover:text-sage-900 underline font-medium"
