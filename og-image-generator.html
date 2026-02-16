@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Imágenes OG - Marta Muñiz</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 { color: #7A9B76; margin-bottom: 30px; }
+    .canvas-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    .canvas-wrapper {
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      background: #fafafa;
+    }
+    canvas {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    h3 {
+      color: #333;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    .download-btn {
+      background: #7A9B76;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+      width: 100%;
+    }
+    .download-btn:hover {
+      background: #6a8b66;
+    }
+    .instructions {
+      background: #e8f4e8;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border-left: 4px solid #7A9B76;
+    }
+    .instructions h2 {
+      color: #7A9B76;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .instructions ol {
+      margin-left: 20px;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Generador de Imágenes Open Graph - Marta Muñiz</h1>
+    
+    <div class="instructions">
+      <h2>📋 Instrucciones de Uso</h2>
+      <ol>
+        <li>Este generador crea automáticamente las 5 imágenes OG necesarias (1200x630px)</li>
+        <li>Haz clic en "Descargar" debajo de cada imagen</li>
+        <li>Guarda los archivos con los nombres exactos indicados</li>
+        <li>Copia las imágenes a <code>/public/</code> reemplazando las existentes</li>
+        <li>Las imágenes están optimizadas para redes sociales (Facebook, Twitter, LinkedIn)</li>
+      </ol>
+    </div>
+
+    <div class="canvas-container">
+      <div class="canvas-wrapper">
+        <h3>1. og-image.jpg (Principal)</h3>
+        <canvas id="canvas1" width="1200" height="630"></canvas>
+        <button class="download-btn" onclick="downloadCanvas('canvas1', 'og-image.jpg')">
+          ⬇️ Descargar og-image.jpg
+        </button>
+      </div>
+
+      <div class="canvas-wrapper">
+        <h3>2. og-blog.jpg</h3>
+        <canvas id="canvas2" width="1200" height="630"></canvas>
+        <button class="download-btn" onclick="downloadCanvas('canvas2', 'og-blog.jpg')">
+          ⬇️ Descargar og-blog.jpg
+        </button>
+      </div>
+
+      <div class="canvas-wrapper">
+        <h3>3. og-terapia-online.jpg</h3>
+        <canvas id="canvas3" width="1200" height="630"></canvas>
+        <button class="download-btn" onclick="downloadCanvas('canvas3', 'og-terapia-online.jpg')">
+          ⬇️ Descargar og-terapia-online.jpg
+        </button>
+      </div>
+
+      <div class="canvas-wrapper">
+        <h3>4. og-especialidad-online.jpg</h3>
+        <canvas id="canvas4" width="1200" height="630"></canvas>
+        <button class="download-btn" onclick="downloadCanvas('canvas4', 'og-especialidad-online.jpg')">
+          ⬇️ Descargar og-especialidad-online.jpg
+        </button>
+      </div>
+
+      <div class="canvas-wrapper">
+        <h3>5. og-presencial.jpg</h3>
+        <canvas id="canvas5" width="1200" height="630"></canvas>
+        <button class="download-btn" onclick="downloadCanvas('canvas5', 'og-presencial.jpg')">
+          ⬇️ Descargar og-presencial.jpg
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const colors = {
+      sage: '#7A9B76',
+      cream: '#FDFCF9',
+      darkSage: '#5a7b56',
+      text: '#2d3748'
+    };
+
+    function drawOGImage(canvasId, title, subtitle, icon) {
+      const canvas = document.getElementById(canvasId);
+      const ctx = canvas.getContext('2d');
+      
+      // Background gradient
+      const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+      gradient.addColorStop(0, colors.cream);
+      gradient.addColorStop(1, '#f0ece3');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, 1200, 630);
+      
+      // Decorative circles
+      ctx.fillStyle = colors.sage + '15';
+      ctx.beginPath();
+      ctx.arc(1050, 150, 200, 0, Math.PI * 2);
+      ctx.fill();
+      
+      ctx.fillStyle = colors.sage + '10';
+      ctx.beginPath();
+      ctx.arc(150, 500, 150, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Main content box
+      ctx.fillStyle = 'white';
+      ctx.shadowColor = 'rgba(0,0,0,0.1)';
+      ctx.shadowBlur = 30;
+      ctx.shadowOffsetY = 10;
+      ctx.roundRect(100, 120, 1000, 390, 20);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+      
+      // Icon/Emoji
+      ctx.font = 'bold 120px Arial';
+      ctx.fillStyle = colors.sage;
+      ctx.textAlign = 'center';
+      ctx.fillText(icon, 600, 260);
+      
+      // Title
+      ctx.font = 'bold 64px Georgia, serif';
+      ctx.fillStyle = colors.text;
+      ctx.textAlign = 'center';
+      ctx.fillText(title, 600, 360);
+      
+      // Subtitle
+      ctx.font = '36px -apple-system, sans-serif';
+      ctx.fillStyle = colors.darkSage;
+      ctx.fillText(subtitle, 600, 420);
+      
+      // Footer
+      ctx.font = 'bold 28px -apple-system, sans-serif';
+      ctx.fillStyle = colors.sage;
+      ctx.fillText('martamg.com', 600, 480);
+    }
+
+    // Generate all OG images
+    drawOGImage('canvas1', 'Marta Muñiz', 'Psicóloga en Santander | Terapia Online', '🌿');
+    drawOGImage('canvas2', 'Blog de Psicología', 'Artículos sobre Salud Mental', '📚');
+    drawOGImage('canvas3', 'Terapia Online', 'Desde cualquier lugar de España', '💻');
+    drawOGImage('canvas4', 'Especialidades', 'Duelo · Pareja · Ansiedad · Depresión', '❤️');
+    drawOGImage('canvas5', 'Terapia Presencial', 'Consulta en Santander, Cantabria', '📍');
+
+    function downloadCanvas(canvasId, filename) {
+      const canvas = document.getElementById(canvasId);
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = canvas.toDataURL('image/jpeg', 0.95);
+      link.click();
+    }
+
+    // Polyfill for roundRect (older browsers)
+    if (!CanvasRenderingContext2D.prototype.roundRect) {
+      CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
+        if (w < 2 * r) r = w / 2;
+        if (h < 2 * r) r = h / 2;
+        this.beginPath();
+        this.moveTo(x + r, y);
+        this.arcTo(x + w, y, x + w, y + h, r);
+        this.arcTo(x + w, y + h, x, y + h, r);
+        this.arcTo(x, y + h, x, y, r);
+        this.arcTo(x, y, x + w, y, r);
+        this.closePath();
+        return this;
+      };
+    }
+  </script>
+</body>
+</html>

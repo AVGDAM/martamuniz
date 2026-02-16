@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieBanner from "@/components/CookieBanner";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -391,6 +392,7 @@ export default function RootLayout({
         <meta name="referrer" content="origin-when-cross-origin" />
       </head>
       <body className="font-sans antialiased">
+        <GoogleAnalytics />
         <Header />
         <main className="min-h-screen">
           {children}
