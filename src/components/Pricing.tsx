@@ -9,7 +9,7 @@ const pricingPlans = [
   {
     title: 'Terapia Individual',
     subtitle: 'Un espacio seguro para ti',
-    price: '60€',
+    price: '50€',
     sessions: '1 hora',
     discount: '',
     features: [
@@ -21,7 +21,7 @@ const pricingPlans = [
   {
     title: 'Terapia de Pareja',
     subtitle: 'Mejora vuestra relación',
-    price: '70€',
+    price: '60€',
     sessions: '1 hora',
     discount: '',
     features: [
@@ -41,6 +41,7 @@ const pricingPlans = [
       'Ejercicios personalizados',
       'Seguimiento continuo',
       'Material de apoyo',
+      'Caducidad: 6 meses',
     ],
   },
   {
@@ -54,6 +55,7 @@ const pricingPlans = [
       'Técnicas de comunicación',
       'Ejercicios conjuntos',
       'Seguimiento personalizado',
+      'Caducidad: 6 meses',
     ],
   },
 ];

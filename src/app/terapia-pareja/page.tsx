@@ -379,7 +379,7 @@ export default function TerapiaPareja() {
                 Mejora vuestra relación
               </p>
               <div className="mb-6">
-                <span className="text-5xl font-bold text-sage-900">70€</span>
+                <span className="text-5xl font-bold text-sage-900">60€</span>
                 <p className="text-sage-600 mt-2">1 hora</p>
               </div>
               <ul className="space-y-3 mb-8">
@@ -437,7 +437,8 @@ export default function TerapiaPareja() {
                     'Seguimiento del progreso',
                     'Material de apoyo',
                     'Ejercicios para hacer en casa',
-                    'Ahorro de 80€',
+                    'Ahorro de 30€',
+                    'Caducidad: 6 meses',
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <FaCheck className="text-cream-200 mt-1 flex-shrink-0" />

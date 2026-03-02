@@ -21,9 +21,9 @@ const specialties = [
     icon: '🌿',
   },
   {
-    title: 'Trastorno de género',
-    description: 'Tratamos tú género y te ayuda a resolver tus dudas y tus problemas que has tenido que vivir por sentir diferente a los demás.',
-    icon: '🌈',
+    title: 'Violencia de género',
+    description: 'Te acompaño en el proceso de recuperación y sanación tras una situación de violencia de género, ayudándote a recuperar tu seguridad, autoestima y bienestar emocional.',
+    icon: '🌸',
   },
 ];
 

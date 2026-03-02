@@ -310,7 +310,7 @@ export default function TerapiaIndividual() {
                 Un espacio seguro para ti
               </p>
               <div className="mb-6">
-                <span className="text-5xl font-bold text-sage-900">60€</span>
+                <span className="text-5xl font-bold text-sage-900">50€</span>
                 <p className="text-sage-600 mt-2">1 hora</p>
               </div>
               <ul className="space-y-3 mb-8">
@@ -368,7 +368,8 @@ export default function TerapiaIndividual() {
                     'Seguimiento continuo',
                     'Material de apoyo',
                     'Ejercicios personalizados',
-                    'Ahorro de 75€',
+                    'Ahorro de 25€',
+                    'Caducidad: 6 meses',
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <FaCheck className="text-cream-200 mt-1 flex-shrink-0" />
