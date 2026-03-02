@@ -22,8 +22,8 @@ export default function Footer() {
           <div>
             <h3 className="font-serif text-lg mb-4">Contacto</h3>
             <ul className="space-y-2 text-sage-300 text-sm">
-              <li>📧 hola@martamg.com</li>
-              <li>📞 +34 680 614 901</li>
+              <li><a href="mailto:hola@martamg.com" className="hover:text-white transition-colors">📧 hola@martamg.com</a></li>
+              <li><a href="tel:+34680614901" className="hover:text-white transition-colors">📞 +34 680 614 901</a></li>
               <li>
                 <a 
                   href="https://wa.me/34680614901"
